@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      NODE_ENV: production
+      PORT: 8080
+      TRANSLATION_PROVIDER: ${TRANSLATION_PROVIDER:-mymemory}
+      GOOGLE_TRANSLATE_API_KEY: ${GOOGLE_TRANSLATE_API_KEY:-}
